@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.tekgainers.keycloak</groupId>
-	<artifactId>custom-theme-demo</artifactId>
+	<artifactId>pfmninza-keycloak-theme</artifactId>
 	<version>0.0.1</version>
-	<name>Custom Theme Demo</name>
+	<name>Pfmninza Keycloak Theme</name>
 	<description />
 </project>
