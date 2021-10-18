@@ -34,7 +34,7 @@ with open('users.csv', newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
     # adding user
-        payload="{\r\n    \"username\":\""+row['firstname']+"\",\r\n    \"firstName\":\""+row['firstname']+"\",\r\n    \"lastName\":\""+row['lastname']+"\",\r\n    \"enabled\":true,\r\n    \"emailVerified\":true,\r\n    \"email\":\""+row['email']+"\"\r\n}"
+        payload="{\r\n    \"username\":\""+row['firstname']+"\",\r\n    \"firstName\":\""+row['firstname']+"\",\r\n    \"lastName\":\""+row['lastname']+"\",\r\n    \"enabled\":true,\r\n    \"emailVerified\":true,\r\n    \"email\":\""+row['email']+"\",    \"credentials\":[ {\r\n      \"type\": \"password\",\r\n      \"value\":\"password\"\r\n    }]\r\n}"
         headers = {
             'Authorization': 'Bearer '+access_token+'',
             'Content-Type': 'application/json'
