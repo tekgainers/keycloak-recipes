@@ -3,12 +3,13 @@ import requests
 import json
 
 ###############################################################################################
-# Sample Script to add user to Keycloak via CSV file
+# Sample Script to add user to Keycloak.X via CSV file
 #
 ###############################################################################################
 
-# getting token to call keycloak add user api
-accessTokenUrl = "http://localhost:8080/auth/realms/master/protocol/openid-connect/token"
+# getting token to call keycloak.X add user api
+accessTokenUrl = "http://localhost:8080/realms/master/protocol/openid-connect/token"
+
 
 #update the admin credential for your keycloak instance
 username='admin'
@@ -27,7 +28,7 @@ access_token=json.loads(response.text)['access_token']
 
 print('Here is the access token'+access_token)
 
-addUserUrl = "http://localhost:8080/auth/admin/realms/master/users"
+addUserUrl = "http://localhost:8080/admin/realms/master/users"
 
 # read csv file containing users to add
 with open('users.csv', newline='') as csvfile:
